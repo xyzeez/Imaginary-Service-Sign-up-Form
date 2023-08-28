@@ -5,7 +5,8 @@
 }
 
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
 }
 
 .logo__text {

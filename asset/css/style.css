@@ -1,0 +1,259 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    min-height: 100vh;
+  }
+  
+  body {
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  :root {
+  
+    /* primary colors */
+    --green: hsl(144, 61%, 20%);
+    --white: hsl(0, 0%, 100%);
+
+    /* neutral colors */
+    --soft_black: hsla(0, 0%, 0%, 0.658);
+    --soft_green: hsl(142, 72%, 29%);
+    --red: hsl(0, 93%, 54%);
+
+    /* font-weights */
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+  
+  }
+
+body {
+    display: grid;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 40% max-content;
+}
+
+.logo-section {
+    display: grid;
+    place-items: center;
+    min-height: 30%;
+    background-image: url(../images/bg-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding-block: 1rem;
+    background-color: var(--soft_black);
+}
+
+.logo__img {
+    width: 65px;
+    height: auto;
+}
+
+.logo__text {
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.form-section {
+    display: grid;
+    place-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, max-content);
+    padding: 2rem;
+}
+
+.form-section__heading {
+    font-size: 2rem;
+    font-weight: var(--bold);
+    color: var(--green);
+    margin-bottom: 1rem;
+}
+
+.form-section__paragraph {
+    font-weight: var(--regular);
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+}
+
+.form-section__form {
+}
+
+.form__fieldset {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    column-gap: 2rem;
+    padding: 0;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.form__input-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    width: 100%;
+}
+
+.form__label {
+    font-size: 15px;
+    font-weight: var(--bold);
+    color: var(--green);
+    padding-left: 10px;
+    transform: translate(0px, 30px);
+    transition: transform 200ms;
+}
+
+.form__label:has( + .form__input:is(:focus), + .form__filled) {
+    transform: translate(-20px, 0px) scale(0.9);
+}
+
+.form__input {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid var(--soft_green);
+    border-radius: 8px;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.form__error-Message {
+    display: none;
+    font-size: 12px;
+    color: var(--red);
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.form__input_invalid + .form__error-Message {
+    display: block;
+}
+
+.btn {
+    display: block;
+    max-width: max-content;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    padding: 10px 20px;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-bottom: 0.1875rem solid var(--green);
+    border-radius: 8px;
+    background-color: var(--green);
+}
+
+.form__btn {
+}
+
+.form__redirect-paragraph {
+    font-size: 15px;
+}
+
+.form__redirect-link {
+    color: var(--soft_green);
+}
+
+@media screen and (min-width: 800px) {
+
+    .main {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: auto;
+    }
+
+    .form-section {
+        padding: 4rem;
+        padding-inline-start: auto;
+    }
+    
+}

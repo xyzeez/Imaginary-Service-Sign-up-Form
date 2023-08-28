@@ -7,11 +7,50 @@
     <link rel="favicon" href="./asset/images/odin-lined.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./asset/font/font.css">
     <link rel="stylesheet" href="./asset/css/style.css">
     <script src="./asset/js/script.js" defer></script>
 </head>
 <body>
-    
+    <main class="main">
+        <section class="logo-section">
+            <div class="logo">
+                <img src="./asset/images/odin-lined.png" alt="ODIN" class="logo__img">
+                <h1 class="logo__text">ODIN</h1>
+            </div>
+        </section>
+        <section class="form-section">
+            <h2 class="form-section__heading">Let's Do This!</h2>
+            <p class="form-section__paragraph">Welcome back! If you already have an account with us, please sign in using your registered email address and password to access your personalized dashboard. If you're new here, don't worry – signing up is quick and easy. Let's get started on your journey with us!</p>
+            <form action="#" class="form form-section__form">
+                <fieldset class="form__fieldset">
+                    <legend class="sr-only">Please enter your information below:</legend>
+                    <div class="form__input-container">
+                        <label for="firstName" class="form__label">First Name</label>
+                        <input type="text" id="firstName" class="form__input" aria-errormessage="">
+                        <p id="firstNameErrorMessage" class="form__error-Message" aria-live="polite">Oops! Looks like you forgot to enter your first name.</p>
+                    </div>
+                    <div class="form__input-container">
+                        <label for="lastName" class="form__label">Last Name</label>
+                        <input type="text" id="lastName" class="form__input" aria-errormessage="">
+                        <p id="lastNameErrorMessage" class="form__error-Message" aria-live="polite">It seems you missed filling out your last name.</p>
+                    </div>
+                    <div class="form__input-container">
+                        <label for="password" class="form__label">Password</label>
+                        <input type="text" id="password" class="form__input" aria-errormessage="">
+                        <p id="passwordErrorMessage" class="form__error-Message" aria-live="polite">Please enter a valid password.</p>
+                    </div>
+                    <div class="form__input-container">
+                        <label for="confirmPassword" class="form__label">Confirm Password</label>
+                        <input type="text" id="confirmPassword" class="form__input" aria-errormessage="">
+                        <p id="confirmPasswordErrorMessage" class="form__error-Message" aria-live="polite">The passwords you entered don't match.</p>
+                    </div>
+                </fieldset>
+                <button type="submit" class="btn form__btn">Create Account</button>
+                <p class="form__redirect-paragraph">Already have an account? <a href="#" class="form__redirect-link">Log in</a></p>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
