@@ -23,27 +23,27 @@
         <section class="form-section">
             <h2 class="form-section__heading">Let's Do This!</h2>
             <p class="form-section__paragraph">Welcome back! If you already have an account with us, please sign in using your registered email address and password to access your personalized dashboard. If you're new here, don't worry – signing up is quick and easy. Let's get started on your journey with us!</p>
-            <form action="#" class="form form-section__form">
+            <form action="#" id="form" class="form form-section__form" novalidate>
                 <fieldset class="form__fieldset">
                     <legend class="sr-only">Please enter your information below:</legend>
                     <div class="form__input-container">
                         <label for="firstName" class="form__label">First Name</label>
-                        <input type="text" id="firstName" class="form__input" aria-errormessage="">
+                        <input type="text" id="firstName" class="form__input" aria-errormessage="firstNameErrorMessage" required>
                         <p id="firstNameErrorMessage" class="form__error-Message" aria-live="polite">Oops! Looks like you forgot to enter your first name.</p>
                     </div>
                     <div class="form__input-container">
                         <label for="lastName" class="form__label">Last Name</label>
-                        <input type="text" id="lastName" class="form__input" aria-errormessage="">
+                        <input type="text" id="lastName" class="form__input" aria-errormessage="lastNameErrorMessage" required>
                         <p id="lastNameErrorMessage" class="form__error-Message" aria-live="polite">It seems you missed filling out your last name.</p>
                     </div>
                     <div class="form__input-container">
                         <label for="password" class="form__label">Password</label>
-                        <input type="text" id="password" class="form__input" aria-errormessage="">
+                        <input type="text" id="password" class="form__input" aria-errormessage="passwordErrorMessage" required>
                         <p id="passwordErrorMessage" class="form__error-Message" aria-live="polite">Please enter a valid password.</p>
                     </div>
                     <div class="form__input-container">
                         <label for="confirmPassword" class="form__label">Confirm Password</label>
-                        <input type="text" id="confirmPassword" class="form__input" aria-errormessage="">
+                        <input type="password" id="confirmPassword" class="form__input" aria-errormessage="confirmPasswordErrorMessage" required>
                         <p id="confirmPasswordErrorMessage" class="form__error-Message" aria-live="polite">The passwords you entered don't match.</p>
                     </div>
                 </fieldset>

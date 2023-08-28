@@ -153,9 +153,6 @@ body {
     grid-template-rows: repeat(3, auto);
 }
 
-.form-section__form {
-}
-
 .form__fieldset {
     display: flex;
     flex-direction: row;
@@ -186,7 +183,7 @@ body {
     transition: transform 200ms;
 }
 
-.form__label:has( + .form__input:is(:focus), + .form__filled) {
+.form__label:has( + .form__input:is(:focus), + .input__filled) {
     transform: translate(-20px, 0px) scale(0.9);
 }
 
@@ -211,7 +208,7 @@ body {
     padding-left: 10px;
 }
 
-.form__input_invalid + .form__error-Message {
+.form__input[aria-invalid="true"] + .form__error-Message {
     display: block;
 }
 
@@ -226,13 +223,15 @@ body {
     color: var(--white);
     padding: 10px 20px;
     margin-bottom: 0.5rem;
-    border: none;
-    border-bottom: 0.1875rem solid var(--green);
+    border: 1px solid var(--green);
     border-radius: 8px;
     background-color: var(--green);
+    transition: all 0.5s ease;
 }
 
-.form__btn {
+.btn:is(:hover, :focus-visible, :active) {
+    color: var(--green);
+    background-color: transparent;
 }
 
 .form__redirect-paragraph {
@@ -241,6 +240,10 @@ body {
 
 .form__redirect-link {
     color: var(--soft_green);
+}
+
+.form__redirect-link:is(:hover, :focus-visible, :active) {
+    color: var(--green);
 }
 
 @media screen and (min-width: 800px) {
