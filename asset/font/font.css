@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Norse;
+    src: url(./Norse-Bold.otf);
+    font-weight: bold;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo__text {
+    font-family: 'Norse', cursive;
+}
